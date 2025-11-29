@@ -2,7 +2,7 @@ resource "aws_dynamodb_table" "flightsyte-dynamodb-table" {
   name           = "Flightsyte_DynamoDB"
   billing_mode   = "PAY_PER_REQUEST"
   hash_key       = "email"
-  range_key      = "createdAt"
+  range_key      = "username"
 
   attribute {
     name = "email"
@@ -10,7 +10,7 @@ resource "aws_dynamodb_table" "flightsyte-dynamodb-table" {
   }
 
   attribute {
-    name = "createdAt"
+    name = "username"
     type = "S"
   }
 
